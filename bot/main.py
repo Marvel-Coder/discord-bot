@@ -4,26 +4,26 @@ import random
 import os
 from discord.ext import commands
 
-client = commands.Bot(command_prefix="!")
-TOKEN = os.getenv("TOKEN")
+client = commands.Bot(command_prefix="~")
+TOKEN = os.getenv("ODc4ODgxMzU5MzMzMDQ0MjY0.YSHoDA.mBP9NHn-z52lOgP8d1xctHyDqUY")
     
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.listening, name='!support | By TheYoBots'))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.listening, name='!support | By None'))
     print(f"Logged in as {client.user.name}")
     print(f"Bot ID: {client.user.id}")
     
 @client.command()
 async def support(ctx):
-    await ctx.send("List of commands: `!test`, `!source`, `!say <value>`, `!ping`, `!meme`, `!guessthenumber`")
+    await ctx.send("List of commands: `!giveaway`, `!source`, `!say <value>`, `!ping`, `!meme`, `!guessthenumber`")
     
 @client.command()
 async def source(ctx):
     await ctx.send("This Bot is made by TheYoBots. Checkout the source code here: https://github.com/TheYoBots/discord-bot")
     
 @client.command()
-async def test(ctx):
-    await ctx.send("Tested! It works!") 
+async def giveaway(ctx):
+    await ctx.send("None right now") 
    
 @client.command()
 async def say(ctx, message):
